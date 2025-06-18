@@ -23,6 +23,18 @@ git clone https://github.com/TheArctesian/lexicon
 echo "All repositories cloned successfully!"
 echo "Repositories are stored in $(pwd)"
 
+# Create a .gitignore file in the parent directory to ignore all cloned repos
+cat > .gitignore << 'EOL'
+# Ignore all cloned repositories
+/canon/
+/echo/
+/gyges/
+/agora/
+/lexicon/
+EOL
+
+echo "Created .gitignore to ignore all cloned repositories"
+
 # List the cloned repositories
 echo "Cloned repositories:"
 ls -la
